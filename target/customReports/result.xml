@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.n26.HttpJsonIT" time="0.984000" tests="6" errors="0" skipped="0" failures="1">
+    <testcase name="Test 100" classname="com.n26.HttpJsonIT" time="0.000000"/>
+    <testcase name="Outdated transactions" classname="com.n26.HttpJsonIT" time="0.521000"/>
+    <testcase name="Random transactions" classname="com.n26.HttpJsonIT" time="0.000000"/>
+    <testcase name="Expiring transactions" classname="com.n26.HttpJsonIT" time="0.000000">
+        <failure>
+            GET /statistics: Response Json does not match with the expected Json.
+        </failure>
+    </testcase>
+    <testcase name="JSON errors" classname="com.n26.HttpJsonIT" time="0.000000"/>
+    <testcase name="BigDecimal rounding" classname="com.n26.HttpJsonIT" time="9.269000"/>
+</testsuite>

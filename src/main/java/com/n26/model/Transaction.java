@@ -1,33 +1,50 @@
 package com.n26.model;
 
-import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Transaction implements Serializable{
-
-	private static final long serialVersionUID = -9087185157453215444L;
-	
-	@JsonProperty 
-	private String amount;
+public class Transaction {
+	@JsonProperty
+	private BigDecimal amount;
 	
 	@JsonProperty
-    private String timestamp;
+	private String timestamp;
 	
-	public String getAmount() {
+	
+	public BigDecimal getAmount() {
 		return amount;
 	}
-	public void setAmount(String amount) {
+
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
+
 	public String getTimestamp() {
 		return timestamp;
 	}
+
 	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
 
-   
+	@Override
+	public int hashCode() {
+		return Objects.hash(amount, timestamp);
+	}
 
-   
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Transaction other = (Transaction) obj;
+		return Objects.equals(amount, other.amount) && Objects.equals(timestamp, other.timestamp);
+	}
+	
+	
 }

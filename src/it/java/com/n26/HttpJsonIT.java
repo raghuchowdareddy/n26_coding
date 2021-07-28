@@ -346,10 +346,8 @@ public class HttpJsonIT {
             long offset = bodyObject.get(TIMESTAMP_OFFSET_PROPERTY).asLong();
             bodyObject.remove(TIMESTAMP_OFFSET_PROPERTY);
             Instant timestamp = Instant.now().plusMillis(offset);
-            //System.out.println("inut date "+timestamp.toEpochMilli());
+
             bodyObject.put("timestamp", TIMESTAMP_FORMATTER.format(timestamp));
-            //System.out.println("input date "+TIMESTAMP_FORMATTER.format(timestamp));
-          
         }
         return bodyObject.toString();
     }

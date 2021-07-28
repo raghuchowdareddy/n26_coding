@@ -4,6 +4,18 @@ import java.io.Serializable;
 
 public class Statistics implements Serializable{
 	private static final long serialVersionUID = 1L;
+
+	
+	public Statistics() {
+	// TODO Auto-generated constructor stub
+    }	
+	public Statistics(String sum, String avg, String max, String min, int count) {
+		this.sum = sum;
+		this.avg = avg;
+		this.max = max;
+		this.min = min;
+		this.count = count;
+	}
 	
 	private String sum;
 	private String avg;
